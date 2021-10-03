@@ -1,1 +1,5 @@
-Architectural decision
+Architectural decision for refactoring from monolith to microservice architecture
+
+I decided to use this architecture approach because while analyzing the monolithic application, 
+I noticed it would be better to use gRPC messaging schemas on-location service since we will be expecting a lot of data traffic from users mobiles devices location, 
+in conjunction with asynchronous message technology like Kafka for better frow with the Postgres databases. 
