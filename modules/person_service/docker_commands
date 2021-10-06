@@ -1,0 +1,2 @@
+docker build -t devhernandez2/person_service:latest .
+docker push  devhernandez2/person_service:latest     
