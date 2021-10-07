@@ -1,0 +1,2 @@
+docker build -t devhernandez2/location_consumer_service:latest .
+docker push  devhernandez2/location_consumer_service:latest     

@@ -2,37 +2,37 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    service: person-service
-  name: person-service
+    service: location-consumer-service
+  name: location-consumer-service
 spec:
   ports:
   - name: "5000"
     port: 5000
     targetPort: 5000
-    nodePort: 30001
+    nodePort: 30003
   selector:
-    service: person-service
+    service: location-consumer-service
   type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    service: person-service
-  name: person-service
+    service: location-consumer-service
+  name: location-consumer-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: person-service
+      service: location-consumer-service
   template:
     metadata:
       labels:
-        service: person-service
+        service: location-consumer-service
     spec:
       containers:
-      - image: devhernandez2/person_service:latest
-        name: person-service
+      - image: devhernandez2/location_consumer_service:latest
+        name: location-consumer-service
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME

@@ -1,0 +1,6 @@
+python3 -m grpc_tools.protoc -I./ --python_out=./ --grpc_python_out=./ location.proto
+
+python3 simaulation_client.py
+
+docker build -t devhernandez2/location_reseptor_service:latest .
+docker push  devhernandez2/location_reseptor_service:latest  
