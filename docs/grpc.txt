@@ -1,0 +1,7 @@
+run the grpc simulation client
+
+go to modules/location_reseptor_service/app
+
+run python or python3 grpc_server.py
+
+run python or python3 simulation_client.py

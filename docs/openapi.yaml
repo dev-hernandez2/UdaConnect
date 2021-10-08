@@ -1,0 +1,64 @@
+---
+openapi: 3.0.1
+info:
+  title: defaultTitle
+  description: defaultDescription
+  version: "0.1"
+servers:
+- url: http://localhost:30001
+paths:
+  /api/persons:
+    get:
+      description: Auto generated using Swagger Inspector
+      responses:
+        "200":
+          description: Auto generated using Swagger Inspector
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                "0":
+                  value: |
+                    [{"last_name": "Fargo", "company_name": "Alpha Omega Upholstery", "id": 5, "first_name": "Taco"}, {"last_name": "Shader", "company_name": "USDA", "id": 6, "first_name": "Frank"}, {"last_name": "Trexler", "company_name": "Hampton, Hampton and McQuill", "id": 1, "first_name": "Pam"}, {"last_name": "Badman", "company_name": "Paul Badman & Associates", "id": 8, "first_name": "Paul"}, {"last_name": "Spring", "company_name": "The Chicken Sisters Restaurant", "id": 9, "first_name": "Otto"}]
+      servers:
+      - url: http://localhost:30001
+    servers:
+    - url: http://localhost:30001
+  /api/persons/5/connection:
+    get:
+      description: Auto generated using Swagger Inspector
+      parameters:
+      - name: end_date
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: 2020-12-30
+      - name: distance
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: "5"
+      - name: start_date
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+        example: 2020-01-01
+      responses:
+        "200":
+          description: Auto generated using Swagger Inspector
+      servers:
+      - url: http://localhost:30001
+    servers:
+    - url: http://localhost:30001
+components: {}
