@@ -28,6 +28,7 @@ class DevelopmentConfig(BaseConfig):
     )
 
 
+
 class TestingConfig(BaseConfig):
     CONFIG_NAME = "test"
     SECRET_KEY = os.getenv("TEST_SECRET_KEY", "Thanos did nothing wrong")
